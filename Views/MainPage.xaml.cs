@@ -39,22 +39,21 @@ public partial class MainPage : ContentPage
             return;
         }
 
-        
         await MA_RealizarRecargaAsync(telefono, operador, monto);
     }
 
     private async Task MA_RealizarRecargaAsync(string telefono, string operador, string monto)
     {
-        
+        // Simulación de una operación asincrónica (ej. llamada a una API)
         await Task.Delay(2000);
 
         string mensaje = $"Se hizo una recarga de {monto} en la siguiente fecha: {DateTime.Now:dd/MM/yyyy}";
         string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), $"{telefono}.txt");
 
-        
+        // Guardar la información en un archivo
         File.WriteAllText(filePath, mensaje);
 
-        
+        // Mostrar mensaje de confirmación
         lblMensaje.Text = "Recarga realizada con éxito";
         lblMensaje.IsVisible = true;
 
