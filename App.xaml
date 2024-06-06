@@ -4,11 +4,40 @@
              xmlns:local="clr-namespace:BaqueroRecargaTelefonica"
              x:Class="BaqueroRecargaTelefonica.App">
     <Application.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
-                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
+        <!-- Define colores -->
+        <Color x:Key="PrimaryColor">#007BFF</Color>
+        <Color x:Key="SecondaryColor">#28A745</Color>
+        <Color x:Key="TextColor">#343A40</Color>
+        <Color x:Key="ErrorColor">#e74c3c</Color>
+
+        <!-- Define estilos -->
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource TextColor}" />
+            <Setter Property="FontSize" Value="Medium" />
+        </Style>
+
+        <Style TargetType="Entry">
+            <Setter Property="TextColor" Value="{StaticResource TextColor}" />
+            <Setter Property="PlaceholderColor" Value="{StaticResource ErrorColor}" />
+            <Setter Property="FontSize" Value="Medium" />
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="FontSize" Value="Medium" />
+            <Setter Property="CornerRadius" Value="5" />
+            <Setter Property="Padding" Value="10,5" />
+        </Style>
+
+        <Style TargetType="RadioButton">
+            <Setter Property="TextColor" Value="{StaticResource TextColor}" />
+            <Setter Property="FontSize" Value="Medium" />
+        </Style>
+
+        <Style TargetType="Picker">
+            <Setter Property="TextColor" Value="{StaticResource TextColor}" />
+            <Setter Property="FontSize" Value="Medium" />
+        </Style>
     </Application.Resources>
 </Application>
