@@ -3,13 +3,12 @@
     x:Class="BaqueroRecargaTelefonica.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:BaqueroRecargaTelefonica"
+    xmlns:views="clr-namespace:BaqueroRecargaTelefonica.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="BaqueroRecargaTelefonica">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <FlyoutItem Title="Recarga Telefónica">
+        <ShellContent ContentTemplate="{DataTemplate views:MainPage}" />
+    </FlyoutItem>
 
 </Shell>
